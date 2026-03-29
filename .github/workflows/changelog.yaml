@@ -13,7 +13,7 @@ on:
 
 jobs:
   call:
-    uses: jellyfin/jellyfin-meta-plugins/.github/workflows/changelog.yaml@master
+    uses: jellyfin/jellyfin-meta-plugins/.github/workflows/changelog.yaml@987f20aa35d3a6c9b3091616c9b3488a3ea897dc # master
     with:
       repository-name: jellyfin/jellyfin-plugin-sessioncleaner
     secrets:

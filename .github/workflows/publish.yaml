@@ -8,7 +8,7 @@ on:
 
 jobs:
   call:
-    uses: jellyfin/jellyfin-meta-plugins/.github/workflows/publish.yaml@master
+    uses: jellyfin/jellyfin-meta-plugins/.github/workflows/publish.yaml@987f20aa35d3a6c9b3091616c9b3488a3ea897dc # master
     with:
       version: ${{ github.event.release.tag_name }}
       is-unstable: ${{ github.event.release.prerelease }}
