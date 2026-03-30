@@ -61,8 +61,8 @@ public class SessionCleanerTask : IScheduledTask, IConfigurableScheduledTask
     public async Task ExecuteAsync(IProgress<double> progress, CancellationToken cancellationToken)
     {
         ArgumentNullException.ThrowIfNull(SessionCleanerPlugin.Instance?.Configuration);
-        var expireDays = SessionCleanerPlugin.Instance.Configuration.Days;
-        var expireDate = DateTime.UtcNow.AddDays(expireDays * -1);
+        var expireMinutes = SessionCleanerPlugin.Instance.Configuration.Minutes;
+        var expireDate = DateTime.UtcNow.AddMinutes(expireMinutes * -1);
         var deviceResult = _deviceManager.GetDevices(new DeviceQuery());
         var devices = deviceResult?.Items;
 
